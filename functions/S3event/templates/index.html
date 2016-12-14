@@ -1,0 +1,28 @@
+{{ template "header" . }}
+<h1>Input</h1>
+<pre>
+{{ .Input }}
+</pre>
+<h1>Output</h1>
+<pre>
+{{ if ne .Indent "null" }}
+{{ .Indent }}
+{{ else }}
+Invalid JSON
+{{ end }}
+</pre>
+
+<h1>Environment</h1>
+<dl>
+{{range $key, $value := .Env -}}
+<dt>{{ $key }}</dt><dd>{{ $value }}</dd>
+{{- end}}
+</dl>
+
+<h1>Context</h1>
+<pre>
+{{ .Ctx }}
+</pre>
+
+</body>
+</html>

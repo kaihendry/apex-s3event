@@ -1,0 +1,10 @@
+{
+	"name": "S3event",
+	"description": "Write an event to a bucket",
+	"memory": 128,
+	"timeout": 5,
+	"role": "arn:aws:iam::407461997746:role/S3event_lambda_function",
+	"environment": {
+		"S3URI": "s3://s3-youtube-masterclass/lambda/index.html"
+	}
+}
